@@ -291,7 +291,7 @@ body, html {
 }
 .our-advantages__column_line_2::after {
     width: 1px;
-    height: 432px;
+    height: 435px;
     top: 4px;
     right: -28px;
 }
@@ -344,7 +344,68 @@ body, html {
     padding: 28px 0 ;
     line-height: 22px;
 }
-
+.main__company-description {
+    padding-top: 88px;
+    padding-bottom: 87px;
+    padding-right: 235px;
+}
+.company-description {
+    box-sizing: border-box;
+    position: relative;
+    max-width: 865px;
+    margin: 0 auto;
+}
+.company-description__title {
+    margin: 0;
+    text-align: right;
+    color: #535353;
+    font-family: "TitilliumWeb";
+    font-size: 3.75rem;
+    font-weight: 400;
+}
+.company-description__text {
+    color: #959393;
+    font-family: "TitilliumWeb";
+    font-size: 1.5rem;
+    text-align: right;
+    padding-top: 11px;
+    line-height: 23px;
+    margin: 0;
+}
+.highlight-text {
+    color: #f65151;
+}
+.company-description__link {
+    transition: 0.3s;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: "TitilliumWeb";
+    font-size: 1rem;
+    color: #676767;
+    text-decoration: none;
+    line-height: 59px;
+    display: inline-block;
+    border: 1px solid #b9b9b9;
+    border-radius: 30px;
+    padding: 0 35px;
+    background-color: #ffffff;
+}
+.company-description__link:hover {
+    background-color: #b9b9b9;
+    color: #ffffff;
+}
+.company-description__link::after {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #b9b9b9;
+    width: 100vw;
+    height: 1px;
+    left: 0;
+    top: 50%;
+    transform: translate(-100%, -50%);
+}
 
 
 
@@ -363,9 +424,33 @@ body, html {
 
 
 /* Media */
-@media (max-width: 1320px) {
+@media (max-width: 1313px) {
     .our-advantages__column_line::after {
         content: none;
+    }
+    .company-description__link::after {
+        content: none;
+    }
+    .main__company-description {
+        padding-top: 55px;
+        padding-right: 0;
+    }
+    .company-description__title {
+        text-align: center;
+    }
+    .company-description__text {
+        text-align: center;
+        line-height: 35px;
+    }
+    .company-description__link {
+        right: 50%;
+        transform: translateX(50%);
+        width: 335px;
+        box-sizing: border-box;
+    }
+    .company-description {
+        padding: 55px 20px;
+        padding-bottom: 87px;
     }
 }
 
@@ -383,6 +468,17 @@ body, html {
     }
     .main__our-advantages {
         padding-top: 30px;
+    }
+    .main__social-networks {
+        left: 50%;
+        top: 20px;
+        transform: translateX(-50%);
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100px;
+    }
+    .social-networks__link {
+        transform: scale(1.5);
     }
 }
 @media (max-width: 725px) {
@@ -414,6 +510,10 @@ body, html {
     .main__title {
         font-size: 2.75rem;
     }
+    .our-advantages__column {
+        min-width: 0;
+        width: 90%;
+    }
 }
 @media (max-width: 475px) {
     .nav__link {
@@ -433,13 +533,25 @@ body, html {
         padding: 15px 0;
     }
 }
-@media (max-width: 440px) {
-    .main__social-networks {
-        left: 50%;
-        top: 20px;
-        transform: translateX(-50%);
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100px;
+@media (max-width: 465px) {
+    .main__company-description {
+        padding-top: 20px;
+    }
+    .company-description__title {
+        font-size: 2.15rem;
+    }
+    .company-description__text {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 380px) {
+    .company-description__link {
+        padding: 0 8px;
+        width: 280px;
+    }
+}
+@media (max-width: 330px) {
+    .our-advantages__title {
+        font-size: 1.57rem;
     }
 }
