@@ -135,11 +135,123 @@ body, html {
     width: auto;
     background-color: #bfc5d4;
 }
-
-
-
-
-
+.main {
+    padding-top: 75px;
+}
+.main__bg {
+    position: relative;
+    padding-top: 30px;
+    width: 100%;
+    height: 540px;
+    background: url('../img/main-bg.jpg') no-repeat 50% 50%;
+    background-size: cover;
+}
+.main__social-networks {
+    position: absolute;
+    right: 35px;
+    top: 140px;
+    transform: translateY(-50%);
+    width: 21px;
+    display: flex;
+    flex-direction: column;
+}
+.social-networks__link {
+    opacity: 0.8;
+    width: 21px;
+    height: 21px;
+    margin-bottom: 17px;
+    background: url('../img/social-networks.png') no-repeat 50% 50%;
+}
+.social-networks__link:hover {
+    opacity: 1;
+}
+.social-networks__link_bg_1 {
+    background-position: 0 0;
+}
+.social-networks__link_bg_2 {
+    background-position: 0 -37px;
+}
+.social-networks__link_bg_3 {
+    background-position: 0 -74px;
+}
+.main__title {
+    font-family: "TitilliumWeb";
+    font-size: 3.75rem;
+    color: #454545;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.main__text {
+    font-family: "TitilliumWeb";
+    font-size: 2.25rem;
+    color: #464646;
+    text-align: center;
+    display: block;
+}
+.main__link {
+    text-decoration: none;
+    color: #fc2028;
+}
+.main__link:hover {
+    text-decoration: underline;
+}
+.create-account-container {
+    display: flex;
+    justify-content: center;
+}
+.main__create-account-container {
+    position: relative;
+    padding-top: 73px;
+}
+.create-account-container__button {
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 5;
+    padding: 0 65px;
+    font-family: "TitilliumWeb";
+    font-size: 1.125rem;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 55px;
+    background-image: linear-gradient(to right, #646c92, #5f2e69);
+    border-radius: 30px;
+    box-shadow: 0 0 10px 2px #c0bdcf;
+}
+.create-account-container__button:hover {
+    box-shadow: 0 0 20px 10px #c0bdcf;
+}
+.create-account-container__download {
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 5;
+    height: 45px;
+    width: 45px;
+    background-color: #6d4972;
+    border-radius: 50%;
+    align-self: center;
+    margin-left: 25px;
+    opacity: 0.9;
+}
+.create-account-container__download:hover {
+    opacity: 1;
+}
+.create-account-container__download_apl {
+    background: #6d4972 url('../img/apple-store.png') no-repeat 50% 50%;
+}
+.create-account-container__download_play {
+    background: #6d4972 url('../img/play-market.png') no-repeat 50% 50%;
+}
+.create-account-container__shadow-line {
+    z-index: 1;
+    position: absolute;
+    top: 93%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 545px;
+    height: 55px;
+    background: url('../img/shadow-line.png') no-repeat 50% 50%;
+}
 
 
 
@@ -167,6 +279,24 @@ body, html {
         flex-wrap: wrap;
     }
 }
+@media (max-width: 625px) {
+    .create-account-container__shadow-line {
+        display: none;
+    }
+    .main__create-account-container {
+        max-width: 246px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .create-account-container__download {
+        margin: 20px 10px;
+    }
+}
+@media (max-width: 540px) {
+    .main__title {
+        font-size: 2.75rem;
+    }
+}
 @media (max-width: 475px) {
     .nav__link {
         text-align: center;
@@ -174,5 +304,24 @@ body, html {
     .nav__container-links {
         width: 100%;
         flex-direction: column;
+    }
+    .main {
+        padding-top: 0;
+    }
+    .header__nav {
+        padding-top: 25px;
+    }
+    .nav__personal-area {
+        padding: 15px 0;
+    }
+}
+@media (max-width: 440px) {
+    .main__social-networks {
+        left: 50%;
+        top: 20px;
+        transform: translateX(-50%);
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100px;
     }
 }
